@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../../common/Modal";
+import { Link } from "react-router-dom";
 const services = [
   {
     id: 1,
@@ -109,8 +110,6 @@ const ServiceCard = ({ title, description, image }) => {
       <Modal isOpen={showModal} toggleModal={(prev) => setShowModal(!prev)}>
         {" "}
         <div className="bg-white p-8 rounded-lg w-96 relative">
-         
-
           <h3 className="text-2xl font-bold text-[var(--color-blue)] mb-6">
             Get a Call Back
           </h3>
@@ -152,7 +151,6 @@ const ServiceCard = ({ title, description, image }) => {
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--color-blue)] focus:ring-[var(--color-blue)] sm:text-sm"
                 required
               />
-
             </div>
 
             <button
@@ -206,8 +204,8 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button
-            onClick={() => (window.location.href = "/services")}
+          <Link
+            to="/services"
             className="text-white text-lg px-8 py-3 rounded-xl cursor-pointer transform hover:scale-105 transition-all duration-300"
             style={{
               background:
@@ -215,7 +213,7 @@ const Services = () => {
             }}
           >
             View All Services
-          </button>
+          </Link>
         </div>
       </div>
     </section>
