@@ -1,18 +1,47 @@
+const testimonials = [
+  {
+    name: "Sneha",
+    role: "Student in UK",
+    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+    text: "I can't thank Skilllinkhire enough for helping me navigate the complex process of studying abroad. From selecting the right university to visa assistance, they guided me every step of the way. The team was knowledgeable, approachable, and always available to answer my questions. Thanks to them, I'm now studying at one of my dream universities abroad!"
+  },
+  {
+    name: "Ananya",
+    role: "Student in Canada",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    text: "Choosing Skilllinkhire was the best decision I made during my study abroad journey. They provided personalized guidance, ensuring that my application was tailored to match my aspirations. Their expertise in visa processing and financial planning gave me peace of mind. I'm now living my dream of studying in Canada and couldn't have done it without their support."
+  },
+  {
+    name: "Ammu",
+    role: "Student in Australia",
+    avatar: "https://randomuser.me/api/portraits/women/3.jpg",
+    text: "The team at Skilllinkhire made my study abroad dreams come true. From shortlisting universities based on my goals to helping me with accommodation and settling in, they took care of everything. Their professionalism and quick responses were amazing. Highly recommend them to anyone looking to study abroad!"
+  },
+  {
+    name: "Sara",
+    role: "Student in Germany",
+    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+    text: "I had no idea where to start when considering studying abroad, but Skilllinkhire made the entire process seamless. Their guidance through university applications, interview prep, and visa processes helped me feel confident. I'm currently in Germany and couldn't be happier with the decision I made with their support!"
+  }
+];
+
 const SuccessCard = () => {
+  const randomTestimonial = testimonials[Math.floor(Math.random() * testimonials.length)];
+
   return (
     <div className="w-full max-w-2xl mx-auto p-6">
       <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
         <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
           <div className="w-14 h-14">
             <img 
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e" 
-              alt="Marry Welsom"
+              src={randomTestimonial.avatar} 
+              alt={randomTestimonial.name}
               className="w-full h-full rounded-full object-cover border-2 border-[var(--color-blue)]"
             />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[var(--color-blue)]">Marry Welsom</h3>
-            <p className="text-gray-600 text-sm">Founder and CEO OF PREMIUM</p>
+            <h3 className="text-xl font-bold text-[var(--color-blue)]">{randomTestimonial.name}</h3>
+            <p className="text-gray-600 text-sm">{randomTestimonial.role}</p>
           </div>
         </div>
 
@@ -24,9 +53,7 @@ const SuccessCard = () => {
           </div>
           
           <p className="text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ecommodo consequat. Duis aute irure dolor in reprehenderit
+            {randomTestimonial.text}
           </p>
           
           <div className="flex justify-end text-[var(--color-pink)]">

@@ -63,12 +63,36 @@ const ServiceCard = ({ title, description, image }) => {
     phone: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-    setShowModal(false);
-    setFormData({ name: "", phone: "" });
+    try {
+      const formBody = new URLSearchParams();
+      formBody.append('name', formData.name);
+      formBody.append('phone', formData.phone);
+      formBody.append('service', title);  // Add service name for context
+
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwO_9tsRb4OQTu5sXSOJg6gDW8QsV7Xb2RGNiHWSpdQUSoZROmJVFAdiq-JCWw0OoSe0Q/exec",
+        {
+          method: 'POST',
+          body: formBody,
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        }
+      );
+
+      if (response.ok) {
+        alert('Form submitted successfully! We will contact you shortly.');
+        setShowModal(false);
+        setFormData({ name: "", phone: "" });
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Something went wrong. Please try again.');
+    }
   };
 
   return (

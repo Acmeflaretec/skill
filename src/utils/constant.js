@@ -127,28 +127,52 @@ export const Faqs = [
   {
     id: 1,
     question: "What does Skilllinks do as a study abroad consultant?",
-    answer: "herere ere erer e",
+    answer: "Skilllinks provides end-to-end guidance for studying abroad, including university selection, application assistance, visa processing, scholarship guidance, and pre-departure support. We help students navigate the entire process from start to finish.",
   },
   {
     id: 2,
     question: "Are the services of Skilllinks available for free?",
-    answer: "herere ere erer e",
+    answer: "We offer both free initial consultations and premium services. Our basic guidance and information sessions are free, while personalized services like application processing and visa assistance come with nominal fees.",
   },
   {
     id: 3,
-    question:
-      "How do I get started on my study abroad journey with Skilllinks?",
-    answer: "herere ere erer e",
+    question: "How do I get started on my study abroad journey with Skilllinks?",
+    answer: "Begin by scheduling a free consultation with our experts. We'll assess your profile, discuss your goals, and create a customized roadmap for your study abroad journey.",
   },
   {
     id: 4,
     question: "Does Skilllinks provide coaching for IELTS?",
-    answer: "herere ere erer e",
+    answer: "Yes, we offer comprehensive IELTS coaching with experienced trainers, mock tests, and personalized feedback to help you achieve your desired band score.",
   },
   {
     id: 5,
     question: "How much does it cost to study abroad for Indian students?",
-    answer: "herere ere erer e",
+    answer: "Costs vary by country and program. On average, tuition ranges from ₹10-40 lakhs annually, with living expenses of ₹5-15 lakhs. We help you find scholarships and financial aid options.",
+  },
+  {
+    id: 6,
+    question: "What are the best countries to study abroad for Indian students?",
+    answer: "Popular destinations include USA, UK, Canada, Australia, Germany, and Ireland. We help you choose based on your budget, career goals, and preferred lifestyle.",
+  },
+  {
+    id: 7,
+    question: "How early should I start preparing to study abroad?",
+    answer: "We recommend starting 12-18 months before your intended intake. This allows time for test preparation, university applications, and visa processing.",
+  },
+  {
+    id: 8,
+    question: "Can I work while studying abroad?",
+    answer: "Most countries allow international students to work part-time (typically 20 hours/week) during studies and full-time during breaks. We'll guide you on work regulations in your chosen country.",
+  },
+  {
+    id: 9,
+    question: "What documents are required for university applications?",
+    answer: "Typically you'll need academic transcripts, test scores (IELTS/TOEFL, GRE/GMAT), SOP, LORs, CV, and financial documents. We provide a complete checklist and help prepare your application package.",
+  },
+  {
+    id: 10,
+    question: "How can I get a scholarship to study abroad?",
+    answer: "We help identify merit-based and need-based scholarships, guide you in preparing strong applications, and assist with essay writing and documentation.",
   },
 ];
 
@@ -344,12 +368,12 @@ export const branches = {
   title: "Contact Us",
   locations: [
     {
-      category: "Mumbai Branches",
-      branches: ["Mumbai HO", "Marine Lines", "Santacruz", "Malad", "Thane", "Vashi"],
+      category: "Main Office",
+      branches: ["United Kingdom"]
     },
     {
       category: "India Branches",
-      branches: ["Ahmedabad", "Bangalore", "Chandigarh", "Chennai", "Cochin","Coimbatore","Delhi","Hyderabad","Indore","Jaipur","Nashik","Kolkata","Pune","Surat","Trivandrum","Vadodara","Vizag"],
+      branches: ["Kollam"],
     },
   ],
 };
