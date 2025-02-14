@@ -13,7 +13,7 @@ const BlogDetails = () => {
     const fetchBlogDetails = async () => {
       try {
         const response = await fetch(
-          `https://cdn.contentful.com/spaces/y00hxuho5l43/entries?content_type=blogPage&access_token=SJxVKuq9Ad_qo0JD9nAnbOulZBg7Av_EPW5RLjVjo4I&include=1`
+          `https://cdn.contentful.com/spaces/mn8lingomwy6/entries?content_type=blogPage&access_token=nSdwxG_tHu9xQjgqT0LgWFq7nvF6QGg1qNA3oIPLuDI&include=1`
         );
         const data = await response.json();
 
