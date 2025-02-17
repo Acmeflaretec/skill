@@ -5,6 +5,7 @@ import {
 } from "../../../utils/constant";
 import flat from "../../../assets/flat.jpg";
 import students from "../../../assets/students.jpg";
+import { Link } from "react-router";
 const Mission = () => {
   return (
     <>
@@ -37,15 +38,16 @@ const Mission = () => {
                 Our Mission
               </h1>
               <p className="text-black text-lg tracking-wide">{OUR_MISSION}</p>
-              <button
-                className="text-white text-xl p-3 rounded-2xl cursor-pointer w-full mt-5 xl:mt-0 xl:w-1/2 mx-auto "
+              <Link
+                to="/about"
+                className="text-white text-xl p-3 rounded-2xl cursor-pointer w-full mt-5 xl:mt-0 xl:w-1/2 mx-auto block text-center no-underline"
                 style={{
                   background:
                     "linear-gradient(135deg, var(--color-blue) 15%, var(--color-lightBlue) 35%, var(--color-pink) 65%, var(--color-violet) 100%)",
                 }}
               >
                 Explore More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

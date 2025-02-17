@@ -29,6 +29,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: ''
   });
 
@@ -55,7 +56,7 @@ console.log(formData);
 
           if (response.ok) {
              alert('Form submitted successfully!!');
-             setFormData({ name: '', email: '', message: '' });
+             setFormData({ name: '', email: '', phone: '', message: '' });
           } else {
              alert('Something went Wrong');
           }
@@ -98,7 +99,9 @@ console.log(formData);
             }
             title="Help Center"
             description="Got a question? We have got an answer."
-            onClick={() => {/* Add your click handler */}}
+            onClick={() => {
+              window.location.href = "mailto:skilllinkhire@gmail.com";
+            }}
           />
 
           <ContactCard
@@ -109,7 +112,9 @@ console.log(formData);
             }
             title="Call Us Now"
             description="Get in touch with our support team"
-            onClick={() => {/* Add your click handler */}}
+            onClick={() => {
+              window.location.href = "tel:9074257171";
+            }}
           />
 
           <ContactCard
@@ -120,7 +125,9 @@ console.log(formData);
             }
             title="Chat with Us"
             description="Start a live chat with our team"
-            onClick={() => {/* Add your click handler */}}
+            onClick={() => {
+              window.location.href = "https://wa.me/919074257171";
+            }}
           />
 
           <ContactCard
@@ -131,7 +138,9 @@ console.log(formData);
             }
             title="Email Us Now"
             description="Send us an email anytime"
-            onClick={() => {/* Add your click handler */}}
+            onClick={() => { 
+              window.location.href = "mailto:skilllinkhire@gmail.com";
+            }}
           />
         </div>
       </div>
@@ -183,6 +192,14 @@ console.log(formData);
               value={formData.email}
               onChange={handleChange}
               name='email'
+              className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
+            />
+            <input 
+              type="tel"
+              placeholder="Your Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              name='phone'
               className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
             />
             <textarea

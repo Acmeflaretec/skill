@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const About = () => {
   return (
     <div className="p-3 lg:px-16 flex flex-col gap-7 lg:gap-12">
@@ -59,7 +61,8 @@ const About = () => {
           </div>
 
           <div className="flex gap-4">
-            <button
+            <Link
+               to ="/contact"
               className="text-white text-lg px-8 py-3 rounded-xl cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex-1"
               style={{
                 background:
@@ -67,12 +70,13 @@ const About = () => {
               }}
             >
               Learn More About Us
-            </button>
-            <button
+            </Link>
+            <Link
+              to ="/contact"
               className="text-[var(--color-blue)] text-lg px-8 py-3 rounded-xl cursor-pointer border-2 border-[var(--color-blue)] hover:bg-[var(--color-blue)] hover:text-white transition-colors duration-300 flex-1"
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

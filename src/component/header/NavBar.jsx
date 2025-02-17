@@ -91,7 +91,10 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <button className="btn bg-[var(--color-blue)] text-white font-light rounded-xl hidden md:block">
+        <button onClick={() => {
+          window.location.href = "tel:9074257171";
+        }}
+         className="btn bg-[var(--color-blue)] text-white font-light rounded-xl hidden md:block">
           Contact Us
         </button>
       </div>
